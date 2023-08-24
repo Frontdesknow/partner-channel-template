@@ -147,11 +147,13 @@ ChannelRouter.get("/importMessages", async (req: Request, res: Response) => {
     delivered_at: 95629829,
   };
 
-  console.log("cheetos");
+  const response = await FrontConnector.importInboundMessage(
+    "cha_dws0k",
+    payload
+  );
 
-  await FrontConnector.importInboundMessage("cha_dviqc", payload);
-
-  // console.log(response);
+  console.log("Response");
+  console.log(response);
   return res.status(200).json({ type: "success" });
 });
 

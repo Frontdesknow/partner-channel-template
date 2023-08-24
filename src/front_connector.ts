@@ -78,6 +78,7 @@ export class FrontConnector {
       multipart: hasAttachments,
     };
 
+    console.log("Options");
     console.log(options);
 
     return await needle("post", path, payload, options);
