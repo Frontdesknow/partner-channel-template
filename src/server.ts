@@ -19,6 +19,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(ChannelRouter);
 
-app.listen(serverPort, () => {
-  console.log(`Express server listening on port ${serverPort}`);
+// app.listen(serverPort, () => {
+//   console.log(`Express server listening on port ${serverPort}`);
+// });
+app.listen(process.env.PORT || serverPort, () => {
+  console.log(
+    `Express server listening on port ${process.env.PORT || serverPort}`
+  );
 });
