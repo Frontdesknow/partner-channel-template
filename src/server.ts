@@ -6,7 +6,8 @@ import bodyParser from "body-parser";
 export const frontId = "4eef3112a1700ef0ceb0";
 export const frontSecret = "1a6f0efaed17c3dae4884248b31b4e7ccc1c0724";
 export const frontUrl = "https://api2.frontapp.com/";
-export const callbackHostname = "https://e30c-96-37-102-208.ngrok-free.app/";
+export const callbackHostname =
+  "https://frontapp-test-4f90c17ba086.herokuapp.com";
 export const serverPort = "3000";
 
 export function randomString(length: number): string {
