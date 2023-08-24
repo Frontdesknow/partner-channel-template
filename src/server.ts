@@ -3,8 +3,8 @@ import ChannelRouter from "./routes";
 import { randomBytes } from "crypto";
 import bodyParser from "body-parser";
 
-export const frontId = "4eef3112a1700ef0ceb0";
-export const frontSecret = "1a6f0efaed17c3dae4884248b31b4e7ccc1c0724";
+export const frontId = "6601c0bd20c1105b";
+export const frontSecret = "b537de67f216bd3aa30d4762534478d2";
 export const frontUrl = "https://api2.frontapp.com";
 export const callbackHostname =
   "https://frontapp-test-4f90c17ba086.herokuapp.com";
