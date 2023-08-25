@@ -23,6 +23,8 @@ ChannelRouter.post("/", async (req: Request, res: Response) => {
       .json({ type: "bad_request", message: "Unknown type sent to channel" });
   }
 
+  console.log(req.body);
+
   const webhookHostname = callbackHostname || os.hostname();
   const webhookId = randomString(16);
   const webhookUrl = `${webhookHostname}/front/${webhookId}`;
@@ -140,20 +142,17 @@ ChannelRouter.get("/importMessages", async (req: Request, res: Response) => {
     },
     body: "minim mollit enim aliqua",
     metadata: {
-      external_id: "non quis",
+      external_id: "non quis3",
       external_conversation_id: "commodo voluptate et velit",
     },
     subject: "nisi non dolore in",
-    delivered_at: 95629829,
+    delivered_at: 1692974094,
   };
 
-  const response = await FrontConnector.importInboundMessage(
-    "cha_dws0k",
-    payload
-  );
+  await FrontConnector.importInboundMessage("cha_dws0k", payload);
 
-  console.log("Response");
-  console.log(response);
+  // console.log("Response");
+  // console.log(response);
   return res.status(200).json({ type: "success" });
 });
 
